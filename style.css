@@ -1,0 +1,487 @@
+p, a, h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase; /* caixa alta */
+  letter-spacing: 1px; /* espaçamento entre letras */
+  font-weight: 700;
+  font-size: 30px;
+  padding: 10px 0; /* margem em cima e em baixo */
+  margin: 0;
+}
+
+    
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* botão padrão */
+.defaultbutton {
+  background-image: linear-gradient(to bottom, #fe7467, #fc3836);
+  border: none;
+  color: white;
+  padding: 20px;
+  text-transform: uppercase;
+  font-weight: 900px;
+  font-size: 18;
+}
+
+/* cc grid pages */
+.bodyhome {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "headerhome"
+  "quemsomos"
+  "sectioncatalogue"
+}
+
+/* header */
+header {
+  padding: 20px;
+  background-repeat: no-repeat; /* para img não se repitir. */
+  background-size: cover;/* para a img cobrir a totalidade da tela. */
+  min-height: 700px; /*  */
+}
+
+header ul{
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  flex-flow: row nowrap;
+  width: 100%;
+  max-width: 500%;
+}
+
+nav{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+
+header.headerhome {
+  grid-area: headerhome;
+  background-image: url("img/spidermanheader.jpg");
+}
+
+header.headercatalogo {
+  background-image: url("img/captainmarvelheader.jpg");
+}
+
+header.headercontato {
+  background-image: url("img/contatoheader.jpg");
+}
+
+.logo{
+max-width: 200px;
+width: auto;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  max-width: 500px;
+  justify-content: space-evenly;
+}
+
+nav a {
+  color: white;
+  text-decoration: none; /* para tirar a formatação original */
+  font-weight: 700px;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+/* foi criado uma class para o home, para adicionar a borda do botão */
+nav a.currentpage {
+  border-bottom: 3px solid #fe7467;
+}
+
+header .titlespiderman {
+  max-width: 320px;
+  height: auto;
+  position: relative;
+  top: 170px; 
+  left: 30px;
+}
+
+header .titlecaptainmarvel {
+  max-width: 470px;
+  height: auto;
+  position: relative;
+  top: 370px; 
+  left: 200px;
+}
+
+header .titlecontato {
+  max-width: 380px;
+  height: auto;
+  position: relative;
+  top: 240px; 
+  left: 230px;
+}
+
+
+/* Main */
+/* Home para todas as pag */
+/* section quem somos */
+section.Quemsomos {
+  grid-area: quemsomos;
+  padding: 20px;
+  background-image: url("img/thor_header.jpg");
+  background-repeat: no-repeat; /* para img não se repitir. */
+  background-size: cover;/* para a img cobrir a totalidade da tela. */
+  min-height: 700px;
+}
+
+.containertextoquemsomos{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  ". textoquemsomos"
+}
+
+h2.tituloquemsomos{
+  text-align: center;
+  text-transform: uppercase; /* caixa alta */
+  letter-spacing: 1px; /* espaçamento entre letras */
+  font-weight: 700;
+  font-size: 30px;
+}
+
+h2.tituloquemsomos {
+  color: white;
+}
+
+h2.tituloquemsomos::after {
+  display: block;/* para ter um display abaixo */
+  content: ''; /* sem conteudo */
+  width: 200px;
+  height: 3px;
+  margin: 30px auto;
+  background-color: white;
+}
+
+p.textoquemsomos {
+  grid-area: textoquemsomos ;
+  color: white;
+  font-size: 26px;
+  max-width: 600px;
+  font-weight: 700;
+  padding: 0 30px 30px 30px;
+}
+
+/* section catálogo */
+.sectioncatalogue{
+  grid-area: sectioncatalogue;
+}
+
+.containercatalogo{
+  display: flex;
+  flex-flow: row nowrap;
+
+}
+
+h2.titulocatalogo::after {
+  display: block;/* para ter um display abaixo */
+  content: ''; /* sem conteudo */
+  width: 200px;
+  height: 3px;
+  margin: 30px auto;
+  border-bottom: 3px auto;
+  background-color: #fe7467;
+}
+
+
+img.sectionimgcatalogo {
+  width: 700px;
+  height: auto;
+}
+
+p.textocatalogo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.botaocatalogohome{
+  border-radius: 15px;
+}
+
+/* Catalogo */
+/* section catalogo */
+
+.gridprodutos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
+}
+
+.containerprodutos {
+ max-width: 380px;
+ padding: 20px;
+}
+
+img.catalogoprodutoimg{
+  max-width: 380px;
+  height: auto;
+}
+
+.botaoprodutocatalogo{
+  border-radius: 30px;
+}
+
+/* contato */
+
+h2.entreemcontato {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 30px;
+  padding: 10px;
+}
+
+h2.entreemcontato::after {
+  display: block;
+  content: '';
+  width: 150px;
+  height: 5px;
+  margin: 15px auto;
+  /* border-bottom: 3px auto; */
+  background-color: #fe7467;
+}
+
+p.textocontato{
+  font-size: 20px;
+  padding: 0px 350px;
+  text-align: center;
+  
+}
+
+   /* Formulario */
+
+   form {
+     display: flex;
+     flex-flow: column wrap;
+     justify-content: center;
+     align-items: center;
+   }
+
+   .containerformulariocontato {
+     display: flex;
+     flex-flow: row wrap ;
+   }
+
+   .containerformularioinputs {
+     display: flex;
+     flex-flow: column wrap;
+     justify-content: space-between;
+     padding: 0 20px;
+     width: 300px;
+   }
+
+   input[type=text], input[type=email], input[type=tel], textarea{
+     color: #f6f6f6;
+     border: 1px solid lightgray;
+     border-radius: 5px;
+     padding: 10px;
+     text-transform: uppercase;
+   }
+
+   textarea {
+     text-transform: none;
+   }
+
+   input[type=submit] {
+     border-radius: 25px;
+   }
+
+   .inputtextarea{
+     color: #d3d3d3;
+     border: 2px solid #d3d3d3;
+     border-radius: 5%;
+     padding: 10px 0 0 30px;
+   }
+
+   .botaocontato {
+     border-radius: 15px;
+     padding: 10px 100px;
+     font-weight: 900;
+     margin-top: 15px;
+     width: 600px;
+   }
+
+   @media screen and (max-width: 480px) { 
+    
+    .defaultbutton {
+      padding: 10px;
+      font-size: 15px;
+    }
+
+
+    /* header */
+    nav{
+      flex-flow: column wrap;
+      align-items: center;
+    }
+
+    header {
+      padding: 20px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 450px; 
+    }
+
+    header ul{
+      padding: 0;
+    }
+
+    header .titlespiderman {
+      max-width: 180px;
+      height: auto;
+      position: relative;
+      top: 150px; 
+      left: 0;
+    }
+
+        
+    header.headerhome {
+      grid-area: headerhome;
+      background-image: url("img/spidermanheader_mobile.jpg");
+    }
+
+    header.headercatalogo {
+      background-image: url("img/captainmarvelheader_Mobile.jpg");
+    }
+
+    header.headercontato {
+      background-image: url("img/contatoheader_mobile.jpg");
+    }
+
+    header .titlecaptainmarvel {
+      display: none;
+    }
+
+    header .titlecontato {
+      display: none;
+    }
+
+    /* home section quem somos */
+    section.Quemsomos {
+      background-image: linear-gradient(to bottom, #fe7467, #fc3836);
+      min-height: 0;
+    }
+
+    .containertextoquemsomos{
+      grid-template-columns: 100%;
+      grid-template-areas: 
+      "textoquemsomos"
+    }
+
+    p.textoquemsomos {
+      text-align: center;
+      font-size: 18px;
+    }
+    
+    .containercatalogo{
+      flex-flow: column-reverse wrap;
+      justify-content: center;
+    }
+
+    img.sectionimgcatalogo {
+      width: 100%;
+      height: auto;
+    }
+
+    p.textocatalogo {
+      font-size: 18px;
+      text-align: center;
+      padding: 0 30px;
+    }
+    
+    .botaocatalogohome{
+      border-radius: 10px;
+      align-self: center;
+      margin-bottom: 30px;
+    }
+
+    .containertextocatalogo {
+      display: flex;
+      flex-flow: column wrap;
+      align-items: center;
+    }
+    
+    /* catalogue */
+
+    h2.titulocatalogo::after {
+      margin: 10px auto;
+    }
+
+    .gridprodutos {
+      justify-content: center;
+    
+    }
+
+    .containerprodutos {
+      max-width: 380px;
+      padding: 10px 20px;
+     }
+     
+     img.catalogoprodutoimg{
+       max-width: 360px;
+     }
+
+     /* contact */
+     .containerformulariocontato {
+      justify-content: center;
+    }
+
+    form {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+    }
+ 
+    .containerformularioinputs {
+      justify-content: center;
+    }
+ 
+    input[type=text], input[type=email], input[type=tel], textarea{
+     margin: 10px 0;
+     width: 300px;
+    }
+ 
+    input[type=submit] {
+      width: 330px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    h2.entreemcontato {
+      margin-top: 30px;
+      font-size: 25px;
+    }
+
+    .textocontato {
+      text-align: center;
+      padding: 0 30px;
+    }
+
+    h2.entreemcontato::after {
+      margin: 15px auto;
+    }
+
+   }
+
+
+
+
